@@ -45,9 +45,11 @@ class UserTasksController < ApplicationController
     respond_to do |format|
       if @user_task.update(user_task_params)
         format.html { redirect_to @user_task, notice: 'User task was successfully updated.' }
+        format.js {}
         format.json { render :show, status: :ok, location: @user_task }
       else
         format.html { render :edit }
+        format.js { render :edit }
         format.json { render json: @user_task.errors, status: :unprocessable_entity }
       end
     end
