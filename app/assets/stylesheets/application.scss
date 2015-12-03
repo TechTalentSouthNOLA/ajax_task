@@ -31,3 +31,8 @@ body {
 .form-box {
   margin-top: 20px;
 }
+
+.task a:hover {
+  color: $brand-danger;
+  text-decoration: line-through;
+}
