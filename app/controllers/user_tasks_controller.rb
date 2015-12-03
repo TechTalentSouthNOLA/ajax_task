@@ -61,6 +61,7 @@ class UserTasksController < ApplicationController
     @user_task.destroy
     respond_to do |format|
       format.html { redirect_to user_tasks_url, notice: 'User task was successfully destroyed.' }
+      format.js {}
       format.json { head :no_content }
     end
   end
