@@ -1,12 +1,14 @@
-<%= simple_form_for(@user_task, remote: true) do |f| %>
-  <%= f.error_notification %>
+<div class="well">
+  <%= simple_form_for(@user_task, remote: true) do |f| %>
+    <%= f.error_notification %>
 
-  <div class="form-inputs">
-    <%= f.input :description, placeholder: "Make groceries." %>
-    <%= f.input :due, as: :string, placeholder: "Today!" %>
-  </div>
+    <div class="form-inputs">
+      <%= f.input :description, placeholder: "Make groceries." %>
+      <%= f.input :due, as: :string, placeholder: "Today!" %>
+    </div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
-  </div>
-<% end %>
+    <div class="form-actions text-right">
+      <%= f.button :button, fa_icon('floppy-o', text: 'Save'), class: 'btn btn-success' %>
+    </div>
+  <% end %>
+</div>
