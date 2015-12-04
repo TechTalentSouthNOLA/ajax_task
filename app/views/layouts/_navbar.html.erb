@@ -18,6 +18,12 @@
       </ul>
 
       <ul class="nav navbar-nav navbar-right">
+        <% if current_user %>
+          <li><%= link_to fa_icon('sign-out', text: 'Sign Out'), signout_path, id: "sign_out" %></li>
+          <li><%= image_tag current_user.small_image, class: "user-thumb" %></li>
+        <% else %>
+          <li><%= link_to fa_icon('sign-in', text: 'Sign in with Facebook'), "/auth/facebook", id: "sign_in" %></li>
+        <% end %>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->

@@ -38,6 +38,7 @@ gem 'simple_form'
 gem 'bootstrap-datepicker-rails'
 gem 'stamp'
 gem 'figaro'
+gem 'omniauth-facebook'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
