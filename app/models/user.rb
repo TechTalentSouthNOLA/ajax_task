@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  has_many :user_tasks
 
   # Create user using the hash that's returned from the Facebook API
   def self.create_with_omniauth(auth)
