@@ -4,8 +4,10 @@ Rails.application.routes.draw do
 
   get "/auth/:provider/callback" => "sessions#create"
   get "/signout" => 'sessions#destroy', as: :signout
+  get "/signin" => 'sessions#new', as: :signin
 
-  resources :user_tasks
+  # Don't like the url to show "user_tasks", change to only show "tasks"
+  resources :user_tasks, path: 'tasks'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
